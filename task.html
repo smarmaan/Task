@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="number">Enter a number:</label>
+    <input type="text" id="number">
+    <button id="double">Double</button>
+    <button id="triple">Triple</button>
+    <div id="result"></div>
+
+    <script>
+        const inputField = document.querySelector('#number');
+        const doubleButton = document.querySelector('#double');
+        const tripleButton = document.querySelector('#triple');
+        const resultDiv = document.querySelector('#result');
+
+        doubleButton.addEventListener('click', () => {
+            const inputValue = Number(inputField.value);
+            if (isNaN(inputValue)) {
+                alert('Please enter a valid number.');
+            } else {
+                resultDiv.textContent = `Double of ${inputValue} is ${inputValue * 2}.`;
+            }
+        });
+
+        tripleButton.addEventListener('click', () => {
+            const inputValue = Number(inputField.value);
+            if (isNaN(inputValue)) {
+                alert('Please enter a valid number.');
+            } else {
+                resultDiv.textContent = `Triple of ${inputValue} is ${inputValue * 3}.`;
+            }
+        });
+    </script>
+</body>
+
+</html>
