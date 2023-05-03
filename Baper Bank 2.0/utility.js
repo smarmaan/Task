@@ -18,3 +18,16 @@ function getInputFieldValueByID(InputFieldID) {
 //
 //
 
+function getTextElementValueById(elementID) {
+  const textElement = document.getElementById(elementID);
+  const textElementValueString = textElement.innerText;
+
+  const textElementValueFloatValue = parseFloat(textElementValueString);
+  return textElementValueFloatValue;
+}
+
+function setInnerTextByID(elementID, newValue) {
+  const textElement = document.getElementById(elementID);
+
+  textElement.innerText = newValue;
+}
